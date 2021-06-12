@@ -49,7 +49,7 @@
 </script>
 
 <main class="max-w-3xl mx-auto space-y-2 py-4">
-    <div class="flex justify-center p-4 rounded-md shadow-md space-x-2">
+    <div class="flex justify-center p-4 space-x-2">
         <div>
             <label for="startDate">Start date</label>
             <input type='date' id="startDate" name="startDate" bind:value={startDate}/>
@@ -86,7 +86,7 @@
                         }
                     }
                 }
-                    <div class="grid grid-cols-3 grid-gap-2 rounded-md mb-4">
+                    <div class="grid grid-cols-3 grid-gap-2 rounded-md bg-gray-300">
                         <div class="col-span-1 md:col-span-2">
                             <video height="488px" class="max-h-[488px] !w-full" controls poster={preview?.images[0]?.resolutions[2]?.url.replaceAll('amp;', '')}>
                                 <source src={media?.reddit_video?.fallback_url} type="video/mp4">
@@ -112,7 +112,7 @@
             <!-- promise was rejected -->
             <p>Something went wrong: {error.message}</p>
         {/await}
-        <button type="button" on:click={() => handleClick()}>NEXT</button>
+        <button class="p-4" type="button" on:click={() => handleClick()}>NEXT</button>
     </div>
 </main>
 
@@ -120,4 +120,12 @@
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
+
+  body {
+      @apply bg-gray-500 text-white;
+  }
+
+  input[type="date"] {
+      @apply text-black;
+  }
 </style>
