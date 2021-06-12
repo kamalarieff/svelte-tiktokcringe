@@ -65,7 +65,9 @@
         {:then posts}
             <!-- promise was fulfilled -->
             {#if posts.length === 0}
-                No more posts.
+                <div class="h-[175px] flex justify-center items-center">
+                    No more posts.
+                </div>
             {:else}
                 {#each posts as {
                         data: {
