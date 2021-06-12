@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+
+[dev]
+  command = "npm run dev"
+  publish = "public"
+  port = 3000
+  targetPort = 8080
+  framework = "#custom"
