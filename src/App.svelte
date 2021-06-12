@@ -92,8 +92,8 @@
                     }
                 }
                     <Post 
-                         previewUrl={preview?.images[0]?.resolutions[2]?.url}
-                         videoUrl={media?.reddit_video?.fallback_url}
+                         previewUrl={preview?.images[0]?.resolutions[2]?.url ?? ""}
+                         videoUrl={media?.reddit_video?.fallback_url ?? ""}
                          permalink={permalink}
                          flair={link_flair_text}
                          id={id}
