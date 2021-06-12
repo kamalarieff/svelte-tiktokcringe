@@ -21,7 +21,13 @@
     $: {
         // this function will close over the new after, startDate and endDate
         async function getRedditPosts() {
-            let { data: { data: { children: res } } } = await axios.get(`https://www.reddit.com/r/TikTokCringe/top.json?t=year&limit=100${after !== undefined ? `&after=t3_${after}` : ''}`);
+            let {
+                data: {
+                    data: {
+                        children: res
+                    }
+                }
+            } = await axios.get(`https://www.reddit.com/r/TikTokCringe/top.json?t=year&limit=100${after !== undefined ? `&after=t3_${after}` : ''}`);
             const start = DateTime.fromISO(startDate).toSeconds();
             const end = DateTime.fromISO(endDate).toSeconds();
             res = res.filter(post => {
