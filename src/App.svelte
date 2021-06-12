@@ -87,12 +87,12 @@
                     }
                 }
                     <div class="grid grid-cols-3 grid-gap-2 rounded-md mb-4">
-                        <div class="col-span-2">
+                        <div class="col-span-1 md:col-span-2">
                             <video height="488px" class="max-h-[488px] !w-full" controls poster={preview?.images[0]?.resolutions[2]?.url.replaceAll('amp;', '')}>
                                 <source src={media?.reddit_video?.fallback_url} type="video/mp4">
                             </video>
                         </div>
-                        <div class="flex flex-col space-y-2 border border-gray-200 p-2">
+                        <div class="flex flex-col space-y-2 border border-gray-200 p-2 col-span-2 md:col-span-1">
                             <span class="rounded-full p-2 w-[fit-content] text-white font-medium" style={`background-color: ${tagBackgroundColors[link_flair_text]}`}>{link_flair_text}</span>
                             <a href={`https://reddit.com${permalink}`} target="_blank">
                                 <!--
