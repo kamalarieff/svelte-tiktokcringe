@@ -14,8 +14,8 @@
     import { DateTime } from 'luxon';
     import Post from './Post.svelte';
     import Spinner from './Spinner.svelte';
-    let startDate = DateTime.now().minus({ months: 2 }).toISODate();
-    let endDate = DateTime.now().minus({ months: 1 }).toISODate();
+    let startDate = DateTime.now().toISODate();
+    let endDate = DateTime.now().toISODate();
     let after, promise, lastPostId;
 
     $: {
