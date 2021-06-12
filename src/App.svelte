@@ -99,7 +99,7 @@
             <!-- promise was rejected -->
             <p>Something went wrong: {error.message}</p>
         {/await}
-        <button class="p-4" type="button" on:click={() => handleClick()}>NEXT</button>
+        <button class="p-4 bg-white text-black" type="button" on:click={() => handleClick()}>NEXT</button>
     </div>
 </main>
 
