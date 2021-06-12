@@ -6,6 +6,7 @@
             font-family: "Roboto";
         }
     </style>
+    <link rel="shortcut icon" href="https://styles.redditmedia.com/t5_mvcq5/styles/communityIcon_40dp09kc5vw41.png?width=256&s=67858eae97c8b471bec4e1e51d4cf4f5df940f42" />
 </svelte:head>
 <script>
     import axios from 'axios';
