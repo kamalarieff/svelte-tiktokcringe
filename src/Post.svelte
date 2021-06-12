@@ -2,6 +2,7 @@
     import { DateTime } from 'luxon';
     export let videoUrl, previewUrl, permalink, flair, id, title, score, created;
     const tagBackgroundColors = {
+        'Cringe': '#ea0027',
         'Humor/Cringe': '#7c5295',
         'Humor': '#24a0ed',
         'Cool': '#ddbd37',
@@ -28,7 +29,7 @@
                 <img src={thumbnail} onerror="if (this.src != 'error.jpg') this.src = '/images/not-found.svg';" class='!h-[488px] !w-[488px]'/>
             -->
             <div class="details">
-                <span><span class="font-bold">{id}</span>: {title}</span>
+                <span><span class="font-bold">{id}</span>: {@html title}</span>
                 <span class="font-medium text-blue-500">{score}</span>
                 <time datetime={DateTime.fromSeconds(created).toISODate()}>{DateTime.fromSeconds(created).toISODate()}</time>
             </div>
